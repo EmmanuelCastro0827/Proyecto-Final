@@ -15,6 +15,9 @@ RUN docker-php-ext-install zip
 # Instalar extensión MongoDB
 RUN pecl install mongodb-1.19.0 && docker-php-ext-enable mongodb
 
+# Arreglar error MPM de Apache
+RUN a2dismod mpm_event mpm_worker && a2enmod mpm_prefork
+
 # Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
