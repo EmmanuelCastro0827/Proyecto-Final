@@ -2,7 +2,7 @@
 // js/script.js  –  VET ECL · Navegación + Llamadas reales a la API
 // =============================================================================
 
-const API = '/api/index.php'; // ajusta si tu servidor usa otro path
+const API = 'proyecto-final-production-448f.up.railway.app'; 
 
 // ── Helpers fetch ─────────────────────────────────────────────────────────────
 
