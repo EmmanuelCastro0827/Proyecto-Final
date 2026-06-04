@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // ── Conexión a MongoDB ────────────────────────────────────────────────────────
 // Cambia la URI si usas usuario/contraseña:
 // mongodb://usuario:contraseña@localhost:27017
-$uri    = 'mongodb+srv://veterinario:67916791MCxxx@cluster0.ni02wb4.mongodb.net/?appName=Cluster0';
+$uri    = 'mongodb+srv://vetcl:67916791MCxxx@cluster0.ni02wb4.mongodb.net/?appName=Cluster0';
 $client = new MongoDB\Client($uri);
 $db     = $client->selectDatabase('veterinaria');
 
