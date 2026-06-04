@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VET ECL</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════ ÍNDICE ══════════════════════════ -->
+<div id="pg-index">
+  <div class="index-pata">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="32" cy="40" rx="15" ry="11" fill="#c9a84c" opacity=".9"/>
+      <ellipse cx="17" cy="29" rx="5.5" ry="7.5" fill="#c9a84c" opacity=".75"/>
+      <ellipse cx="47" cy="29" rx="5.5" ry="7.5" fill="#c9a84c" opacity=".75"/>
+      <ellipse cx="25" cy="22" rx="4" ry="5.5" fill="#c9a84c" opacity=".6"/>
+      <ellipse cx="39" cy="22" rx="4" ry="5.5" fill="#c9a84c" opacity=".6"/>
+    </svg>
+  </div>
+  <div class="index-tag">Tienda Oficial</div>
+  <h1 class="index-h1">Bienvenido a<br><em>VET ECL</em></h1>
+  <p class="index-sub">Plataforma de gestión veterinaria. Accede al sitio web de la clínica o administra los registros del sistema.</p>
+
+  <div class="index-cards">
+    <div class="index-card" onclick="showPg('pg-sitio')">
+      <div class="ic-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="ic-label">Página Principal</div>
+      <div class="ic-title">Sitio Web</div>
+      <p class="ic-desc">Inicio, servicios, equipo médico, agenda de citas y contacto de la clínica.</p>
+      <div class="ic-arrow">Ir al sitio →</div>
+    </div>
+
+    <div class="index-card" onclick="showPg('pg-registros')">
+      <div class="ic-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+      </div>
+      <div class="ic-label">Administración</div>
+      <div class="ic-title">Registro de Datos</div>
+      <p class="ic-desc">Registra clientes, mascotas, veterinarios, citas, tratamientos y facturas.</p>
+      <div class="ic-arrow">Ir al panel →</div>
+    </div>
+
+    <div class="index-card" style="cursor:default;opacity:.5;">
+      <div class="ic-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="ic-label">Panel Restringido</div>
+      <div class="ic-title">Admin Panel</div>
+      <p class="ic-desc">Reportes, estadísticas y configuración del sistema. Acceso solo para administradores.</p>
+      <div class="ic-arrow" style="opacity:.4;">Próximamente →</div>
+    </div>
+  </div>
+
+  <p class="index-footer">© 2026 VET ECL · Clínica Veterinaria Certificada</p>
+</div>
+
+<!-- ══════════════════════════ SITIO WEB ══════════════════════════ -->
+<div id="pg-sitio" class="pg">
+  <nav>
+    <div class="logo" onclick="showPg('pg-index')">VET <span>ECL</span></div>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#servicios-sec">Servicios</a></li>
+      <li><a href="#equipo-sec">Equipo</a></li>
+      <li><a href="#citas-sec">Citas</a></li>
+      <li><a href="#contacto-sec">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-nav-outline" onclick="showPg('pg-registros')">Panel Registros</button>
+      <button class="btn-nav" onclick="document.getElementById('citas-sec').scrollIntoView({behavior:'smooth'})">Agendar Cita</button>
+    </div>
+  </nav>
+  <div>
+
+  <!-- HERO -->
+  <div id="inicio" style="display:grid;grid-template-columns:1fr 1fr;min-height:90vh;">
+    <div class="hero-left">
+      <div class="hero-tag">Clínica Veterinaria Certificada</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.8rem);font-weight:400;line-height:1.08;">Tu mascota merece<br><em style="color:var(--dorado);font-style:italic;">lo mejor</em></h1>
+      <p class="hero-desc">Atención veterinaria de élite con tecnología de vanguardia y un equipo comprometido con la salud y bienestar de tus compañeros de vida.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('citas-sec').scrollIntoView({behavior:'smooth'})">Agendar Cita</button>
+        <a class="btn-ghost" href="#servicios-sec">Ver Tratamientos</a>
+      </div>
+      <div class="stats">
+        <div><div class="stat-num">10+</div><div class="stat-label">Años de experiencia</div></div>
+        <div><div class="stat-num">2k</div><div class="stat-label">Pacientes atendidos</div></div>
+        <div><div class="stat-num">6</div><div class="stat-label">Especialistas</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-area">
+        <div class="logo-circle">
+          <svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="40" rx="15" ry="11" fill="#c9a84c" opacity=".9"/><ellipse cx="17" cy="29" rx="5.5" ry="7.5" fill="#c9a84c" opacity=".75"/><ellipse cx="47" cy="29" rx="5.5" ry="7.5" fill="#c9a84c" opacity=".75"/><ellipse cx="25" cy="22" rx="4" ry="5.5" fill="#c9a84c" opacity=".6"/><ellipse cx="39" cy="22" rx="4" ry="5.5" fill="#c9a84c" opacity=".6"/></svg>
+        </div>
+        <h3>Siempre a tu lado</h3>
+        <p class="sub">Atención personalizada · Cada paciente</p>
+      </div>
+      <div class="servicios-grid">
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-3-3v6M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"/></svg>Consulta General</div>
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8 12h8M12 8v8"/></svg>Vacunación</div>
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>Cirugía</div>
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>Laboratorio</div>
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>Odontología</div>
+        <div class="servicio-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>Grooming</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios-sec" class="sec">
+    <div class="sec-tag">Lo que ofrecemos</div>
+    <h2>Nuestros Servicios</h2>
+    <p class="sec-sub">Cuidado integral para cada etapa de vida</p>
+    <div class="serv-grid">
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-3-3v6M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9z"/></svg>
+        <h3>Consulta General</h3>
+        <p>Revisión completa del estado de salud de tu mascota con diagnóstico preventivo y orientación nutricional.</p>
+        <span class="serv-price">Disponible todos los días</span>
+      </div>
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8 12h8M12 8v8"/></svg>
+        <h3>Vacunación</h3>
+        <p>Esquemas completos de vacunación: Rabia, Parvovirus, Moquillo y más. Registro digital del historial.</p>
+        <span class="serv-price">Con o sin cita previa</span>
+      </div>
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        <h3>Cirugía</h3>
+        <p>Procedimientos quirúrgicos con tecnología de vanguardia. Equipo especializado y anestesia supervisada.</p>
+        <span class="serv-price">Desde $14,500</span>
+      </div>
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        <h3>Laboratorio</h3>
+        <p>Análisis clínicos completos: sangre, orina, cultivos y biopsias con resultados en el mismo día.</p>
+        <span class="serv-price">Resultados en 24h</span>
+      </div>
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        <h3>Odontología</h3>
+        <p>Limpieza dental, extracciones y tratamientos periodontales. Higiene bucal que mejora la calidad de vida.</p>
+        <span class="serv-price">Turno matutino</span>
+      </div>
+      <div class="serv-card">
+        <svg class="serv-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <h3>Grooming</h3>
+        <p>Baño, corte de pelo, limpieza de oídos y corte de uñas. Tu mascota sana y hermosa.</p>
+        <span class="serv-price">Sin cita previa</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo-sec" class="sec sec-dark">
+    <div class="sec-tag">Nuestros profesionales</div>
+    <h2>El Equipo</h2>
+    <p class="sec-sub">Especialistas comprometidos con tu mascota</p>
+    <div class="equipo-grid">
+      <div class="vet-card"><div class="vet-initial">I</div><h4>Ian Castro</h4><div class="vet-esp">Cirugía</div><p class="vet-detail">Turno matutino · Lun–Vie<br>Horario: 6am – 1pm</p><span class="vet-badge">LMJSD</span></div>
+      <div class="vet-card"><div class="vet-initial">A</div><h4>Alan Gómez</h4><div class="vet-esp">Cirugía</div><p class="vet-detail">Turno matutino · Lun–Vie<br>Horario: 6am – 1pm</p><span class="vet-badge">MMJTD</span></div>
+      <div class="vet-card"><div class="vet-initial">C</div><h4>Carlos Andrés</h4><div class="vet-esp">Cardiología</div><p class="vet-detail">Turno matutino · Todos<br>Horario: 9am – 6pm</p><span class="vet-badge">LMMJVSD</span></div>
+      <div class="vet-card"><div class="vet-initial">E</div><h4>Eduardo Castillo</h4><div class="vet-esp">Cardiología</div><p class="vet-detail">Turno matutino · Lun/Mié/Vie<br>Horario: 9am – 6pm</p><span class="vet-badge">MVD</span></div>
+      <div class="vet-card"><div class="vet-initial">F</div><h4>Franco Escamilla</h4><div class="vet-esp">Cardiología</div><p class="vet-detail">Turno matutino · Todos<br>Horario: 9am – 6pm</p><span class="vet-badge">LMVJD</span></div>
+      <div class="vet-card"><div class="vet-initial">E</div><h4>Emmanuel Castro</h4><div class="vet-esp">Cirugía</div><p class="vet-detail">Turno matutino · Día completo<br>Horario: 9am – 6pm</p><span class="vet-badge">Día completo</span></div>
+    </div>
+  </section>
+
+  <!-- CITAS -->
+  <section id="citas-sec" class="sec">
+    <div class="sec-tag">Reserva tu espacio</div>
+    <h2>Agendar Cita</h2>
+    <p class="sec-sub">Rápido, sencillo y sin esperas</p>
+    <div class="citas-wrap">
+      <div class="citas-info">
+        <h3>¿Por qué elegirnos?</h3>
+        <p>Contamos con 6 especialistas disponibles en horarios matutinos y vespertinos para que tu mascota siempre reciba atención oportuna.</p>
+        <div class="info-item"><div class="info-dot"></div><p><strong>Confirmación inmediata</strong><br>Te contactamos en menos de 2 horas para confirmar tu cita.</p></div>
+        <div class="info-item"><div class="info-dot"></div><p><strong>Horario extendido</strong><br>Lunes a Sábado de 6am a 6pm. Emergencias 24h.</p></div>
+        <div class="info-item"><div class="info-dot"></div><p><strong>Historial digital</strong><br>Toda la información de tu mascota guardada y accesible.</p></div>
+      </div>
+      <div>
+        <div class="form-grid">
+          <div class="form-group"><label>Nombre del dueño</label><input type="text" placeholder="Tu nombre completo"/></div>
+          <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="656 000 0000"/></div>
+          <div class="form-group"><label>Nombre de la mascota</label><input type="text" placeholder="Nombre"/></div>
+          <div class="form-group"><label>Tipo de animal</label><select><option value="">Seleccionar…</option><option>Perro</option><option>Gato</option><option>Otro</option></select></div>
+          <div class="form-group"><label>Servicio</label><select><option value="">Seleccionar…</option><option>Consulta General</option><option>Vacunación</option><option>Cirugía</option><option>Laboratorio</option><option>Odontología</option><option>Grooming</option></select></div>
+          <div class="form-group"><label>Veterinario</label><select><option value="">Seleccionar…</option><option>Ian Castro</option><option>Alan Gómez</option><option>Carlos Andrés</option><option>Eduardo Castillo</option><option>Franco Escamilla</option><option>Emmanuel Castro</option></select></div>
+          <div class="form-group full"><label>Fecha preferida</label><input type="date"/></div>
+          <div class="form-group full"><label>Notas adicionales</label><textarea placeholder="Síntomas, alergias u observaciones…"></textarea></div>
+        </div>
+        <button class="btn-submit" onclick="showSuccess(this)">Confirmar Cita</button>
+        <div class="success-msg">✓ Cita registrada exitosamente. Te contactaremos en breve.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto-sec" class="sec sec-dark">
+    <div class="sec-tag">Encuéntranos</div>
+    <h2>Contacto</h2>
+    <p class="sec-sub">Estamos para ayudarte</p>
+    <div class="contacto-grid">
+      <div class="contacto-item"><div class="c-label">Teléfono</div><div class="c-val">(614) 123-4567</div><div class="c-note">Lun–Sáb · 6am – 6pm</div></div>
+      <div class="contacto-item"><div class="c-label">Correo</div><div class="c-val">contacto@vetecl.mx</div><div class="c-note">Respuesta en 24 horas</div></div>
+      <div class="contacto-item"><div class="c-label">Dirección</div><div class="c-val">Av. Principal 345</div><div class="c-note">Col. Centro, Chihuahua</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo" onclick="showPg('pg-index')" style="cursor:pointer;">VET <span>ECL</span></div>
+    <p>© 2026 Clínica Veterinaria ECL · Todos los derechos reservados</p>
+  </footer>
+  </div><!-- fin padding-top wrapper sitio -->
+</div>
+
+<!-- ══════════════════════════ PANEL REGISTROS ══════════════════════════ -->
+<div id="pg-registros" class="pg">
+  <nav>
+    <div class="logo" onclick="showPg('pg-index')">VET <span>ECL</span></div>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showRegIndex();return false;" class="active">Colecciones</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-nav-outline" onclick="showPg('pg-sitio')">← Sitio Web</button>
+    </div>
+  </nav>
+  <div>
+
+  <!-- ÍNDICE DE COLECCIONES -->
+  <div id="reg-index-pg" class="reg-index">
+    <div class="sec-tag">Base de datos</div>
+    <h2>Registro de Colecciones</h2>
+    <p class="r-sub">Selecciona la colección que deseas registrar</p>
+    <div class="col-cards">
+      <div class="col-card" onclick="showRegForm('cliente')">
+        <div class="col-dot" style="background:rgba(130,100,200,.15);color:#9b7fe8;">👤</div>
+        <h3>Clientes</h3>
+        <p>Registra los datos del dueño: nombre, teléfono, dirección, correo y mascota asociada.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+      <div class="col-card" onclick="showRegForm('mascota')">
+        <div class="col-dot" style="background:rgba(201,168,76,.12);color:var(--dorado);">🐾</div>
+        <h3>Mascotas</h3>
+        <p>Registra animal, raza, edad, peso, atención requerida y estado de vacunas.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+      <div class="col-card" onclick="showRegForm('veterinario')">
+        <div class="col-dot" style="background:rgba(46,180,120,.12);color:#2eb478;">🩺</div>
+        <h3>Veterinarios</h3>
+        <p>Alta de personal: especialidad, turno, días laborados, RFC y estado activo.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+      <div class="col-card" onclick="showRegForm('cita')">
+        <div class="col-dot" style="background:rgba(58,130,220,.12);color:#3a82dc;">📅</div>
+        <h3>Citas</h3>
+        <p>Vincula una mascota con un veterinario en fecha y hora específica.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+      <div class="col-card" onclick="showRegForm('tratamiento')">
+        <div class="col-dot" style="background:rgba(220,80,80,.12);color:#dc5050;">💊</div>
+        <h3>Tratamientos</h3>
+        <p>Registra el servicio aplicado a una mascota con costo y descripción.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+      <div class="col-card" onclick="showRegForm('factura')">
+        <div class="col-dot" style="background:rgba(80,200,180,.12);color:#50c8b4;">🧾</div>
+        <h3>Facturas</h3>
+        <p>Genera el folio de pago con monto, trabajo realizado y referencias del servicio.</p>
+        <div class="col-tag">Nuevo registro</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULARIOS -->
+  <!-- CLIENTE -->
+  <div id="frm-cliente" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Cliente</span></div>
+      <div class="reg-title">Nuevo Cliente</div>
+      <div class="reg-subtitle">Tabla Clientes · Fichas moradas</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>ID Cliente</label><input type="text" placeholder="Ej: 029449"/></div>
+        <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Nombre del dueño"/></div>
+        <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="656 000 0000"/></div>
+        <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="correo@gmail.com"/></div>
+        <div class="form-group full"><label>Dirección</label><input type="text" placeholder="Calle, Colonia, Ciudad"/></div>
+        <div class="form-group"><label>Fecha de registro</label><input type="date"/></div>
+        <div class="form-group"><label>Nombre de la mascota</label><input type="text" placeholder="Nombre de la mascota"/></div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Cliente</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Cliente registrado correctamente.</div>
+    </div>
+  </div>
+
+  <!-- MASCOTA -->
+  <div id="frm-mascota" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Mascota</span></div>
+      <div class="reg-title">Nueva Mascota</div>
+      <div class="reg-subtitle">Tabla Mascotas · Fichas amarillas</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>ID Mascota</label><input type="text" placeholder="Ej: 038"/></div>
+        <div class="form-group"><label>ID Cliente (dueño)</label><input type="text" placeholder="ID del cliente"/></div>
+        <div class="form-group"><label>Tipo de animal</label><select><option value="">Seleccionar…</option><option>Perro</option><option>Gato</option><option>Ave</option><option>Otro</option></select></div>
+        <div class="form-group"><label>Raza</label><input type="text" placeholder="Ej: Pastor, Pug, Maine Coon"/></div>
+        <div class="form-group"><label>Nombre de la mascota</label><input type="text" placeholder="Nombre"/></div>
+        <div class="form-group"><label>Edad (años)</label><input type="number" placeholder="Ej: 3"/></div>
+        <div class="form-group"><label>Peso (kg)</label><input type="number" step="0.1" placeholder="Ej: 15.5"/></div>
+        <div class="form-group"><label>Atención requerida</label><select><option value="">Seleccionar…</option><option>Consulta General</option><option>Cirugía</option><option>Cardiología</option><option>Baño</option><option>Vacunación</option><option>Laboratorio</option></select></div>
+        <div class="form-group"><label>Fecha de registro</label><input type="date"/></div>
+        <div class="form-group"><label>Número de registro</label><input type="text" placeholder="Número de registro"/></div>
+        <div class="form-group full" style="display:flex;gap:24px;align-items:center;flex-direction:row;flex-wrap:wrap;">
+          <label style="font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--gris);margin-bottom:0;">Vacunas aplicadas:</label>
+          <label style="display:flex;gap:8px;align-items:center;font-size:.82rem;cursor:pointer;"><input type="checkbox" style="accent-color:var(--dorado);width:auto;border:none;padding:0;background:transparent;"/> Rabia</label>
+          <label style="display:flex;gap:8px;align-items:center;font-size:.82rem;cursor:pointer;"><input type="checkbox" style="accent-color:var(--dorado);width:auto;border:none;padding:0;background:transparent;"/> Parvovirus</label>
+          <label style="display:flex;gap:8px;align-items:center;font-size:.82rem;cursor:pointer;"><input type="checkbox" style="accent-color:var(--dorado);width:auto;border:none;padding:0;background:transparent;"/> Moquillo</label>
+        </div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Mascota</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Mascota registrada correctamente.</div>
+    </div>
+  </div>
+
+  <!-- VETERINARIO -->
+  <div id="frm-veterinario" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Veterinario</span></div>
+      <div class="reg-title">Nuevo Veterinario</div>
+      <div class="reg-subtitle">Tabla Veterinarios · Fichas verdes</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>ID Veterinario</label><input type="text" placeholder="Ej: 0811"/></div>
+        <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Nombre del veterinario"/></div>
+        <div class="form-group"><label>Especialidad</label><select><option value="">Seleccionar…</option><option>Cirugía</option><option>Cardiología</option><option>Medicina General</option><option>Odontología</option></select></div>
+        <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="614 000 0000"/></div>
+        <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="correo@gmail.com"/></div>
+        <div class="form-group"><label>RFC</label><input type="text" placeholder="RFC del veterinario"/></div>
+        <div class="form-group"><label>Turno</label><select><option value="">Seleccionar…</option><option>Matutino</option><option>Vespertino</option><option>Día completo</option></select></div>
+        <div class="form-group"><label>Días laborados</label><input type="text" placeholder="Ej: LMMJVSD"/></div>
+        <div class="form-group"><label>Horario</label><input type="text" placeholder="Ej: 6am – 1pm"/></div>
+        <div class="form-group"><label>Dirección</label><input type="text" placeholder="Dirección"/></div>
+        <div class="form-group"><label>Estado</label><select><option>Activo</option><option>Inactivo</option></select></div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Veterinario</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Veterinario registrado correctamente.</div>
+    </div>
+  </div>
+
+  <!-- CITA -->
+  <div id="frm-cita" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Cita</span></div>
+      <div class="reg-title">Nueva Cita</div>
+      <div class="reg-subtitle">Tabla Citas · Fichas naranjas</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>ID Cita</label><input type="text" placeholder="Ej: 0838"/></div>
+        <div class="form-group"><label>Fecha de la cita</label><input type="date"/></div>
+        <div class="form-group"><label>ID Mascota</label><input type="text" placeholder="ID de la mascota"/></div>
+        <div class="form-group"><label>ID Veterinario</label><input type="text" placeholder="ID del veterinario"/></div>
+        <div class="form-group"><label>Registro</label><input type="text" placeholder="Número de registro"/></div>
+        <div class="form-group"><label>Hora</label><input type="time"/></div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Cita</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Cita registrada correctamente.</div>
+    </div>
+  </div>
+
+  <!-- TRATAMIENTO -->
+  <div id="frm-tratamiento" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Tratamiento</span></div>
+      <div class="reg-title">Nuevo Tratamiento</div>
+      <div class="reg-subtitle">Tabla Tratamientos · Fichas azul/turquesa</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>ID Tratamiento</label><input type="text" placeholder="Ej: 2011"/></div>
+        <div class="form-group"><label>ID Mascota</label><input type="text" placeholder="ID de la mascota"/></div>
+        <div class="form-group"><label>Servicio</label><select><option value="">Seleccionar…</option><option>Cirugía</option><option>Cardiología</option><option>Consulta General</option><option>Vacunación</option><option>Laboratorio</option><option>Odontología</option><option>Grooming</option></select></div>
+        <div class="form-group"><label>Costo ($)</label><input type="number" placeholder="Ej: 15000"/></div>
+        <div class="form-group full"><label>Descripción</label><textarea placeholder="Descripción del tratamiento aplicado…"></textarea></div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Tratamiento</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Tratamiento registrado correctamente.</div>
+    </div>
+  </div>
+
+  <!-- FACTURA -->
+  <div id="frm-factura" class="reg-form-pg">
+    <div class="reg-form-wrap">
+      <div class="reg-breadcrumb" onclick="showRegIndex()"><span>Colecciones</span> › <span>Factura</span></div>
+      <div class="reg-title">Nueva Factura</div>
+      <div class="reg-subtitle">Tabla Facturas · Tratamiento/Factura</div>
+      <div class="reg-form-grid">
+        <div class="form-group"><label>Folio</label><input type="text" placeholder="Ej: 3835"/></div>
+        <div class="form-group"><label>Pago ($)</label><input type="number" placeholder="Ej: 15000"/></div>
+        <div class="form-group"><label>Fecha y hora</label><input type="datetime-local"/></div>
+        <div class="form-group"><label>Trabajo realizado</label><select><option value="">Seleccionar…</option><option>Cirugía</option><option>Cardiología</option><option>Consulta General</option><option>Vacunación</option><option>Todos</option></select></div>
+        <div class="form-group"><label>ID Veterinario</label><input type="text" placeholder="ID del veterinario"/></div>
+        <div class="form-group"><label>ID Mascota</label><input type="text" placeholder="ID de la mascota"/></div>
+        <div class="form-group"><label>ID Cliente</label><input type="text" placeholder="ID del cliente"/></div>
+        <div class="form-group"><label>Registro</label><input type="text" placeholder="Número de registro"/></div>
+      </div>
+      <div class="reg-actions">
+        <button class="btn-reg-save" onclick="showSuccess(this)">Guardar Factura</button>
+        <button class="btn-reg-cancel" onclick="showRegIndex()">Cancelar</button>
+      </div>
+      <div class="success-msg">✓ Factura registrada correctamente.</div>
+    </div>
+  </div>
+
+  </div><!-- fin padding-top wrapper registros -->
+</div><!-- fin pg-registros -->
+
+<script src="js/script.js"></script>
+</body>
+</html>
