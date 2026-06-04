@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     unzip \
     zip \
+    libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Instalar extensión zip de PHP
